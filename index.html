@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#071225">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='7' y='51' font-size='52' fill='%23ff8db7'%3E%E2%99%A5%3C/text%3E%3C/svg%3E">
+  <title>Un vuelo hacia ti</title>
+  <meta name="description" content="Una pequeña historia bajo las estrellas.">
+  <link rel="preload" as="image" href="assets/archipielago-nordico-v10.png" media="(min-width: 651px)">
+  <link rel="preload" as="image" href="assets/archipielago-movil-v10.png" media="(max-width: 650px)">
+  <link rel="preload" as="font" type="font/ttf" href="assets/fonts/Lora.ttf" crossorigin>
+  <link rel="preload" as="font" type="font/ttf" href="assets/fonts/Caveat.ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=13">
+  <link rel="stylesheet" href="letter.css?v=13">
+</head>
+<body>
+  <main id="experience" class="experience" aria-live="polite">
+    <button id="musicButton" class="music-button" type="button" aria-label="Silenciar música" aria-pressed="false" title="Silenciar música" hidden>
+      <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4 11h5l6-5v16l-6-5H4z"/><path class="sound-waves" d="M19 10c2 2 2 6 0 8m3-11c4 4 4 10 0 14"/><path class="sound-slash" d="M4 4l21 21"/></svg>
+    </button>
+    <div class="sky" aria-hidden="true">
+      <div class="aurora aurora-one"></div>
+      <div class="aurora aurora-two"></div>
+      <div class="moon"><span class="moon-shadow"></span></div>
+      <div id="stars" class="stars"></div>
+      <div class="mist mist-far"></div>
+      <div class="mist mist-near"></div>
+      <svg class="horizon" viewBox="0 0 1600 430" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="mountain-far" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#17385a"/>
+            <stop offset="1" stop-color="#08182f"/>
+          </linearGradient>
+          <linearGradient id="mountain-near" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#102747"/>
+            <stop offset="1" stop-color="#050d1c"/>
+          </linearGradient>
+        </defs>
+        <path class="mountain mountain-far" fill="url(#mountain-far)" d="M0 258 115 196l72 23 120-119 83 77 94-52 93 100 78-44 114-102 91 78 63-34 129 112 84-62 96 53 87-75 91 50 110-83 100 89v223H0z"/>
+        <path class="mountain mountain-near" fill="url(#mountain-near)" d="M0 330 136 237l92 49 104-64 125 103 107-88 95 57 121-112 114 105 114-78 95 88 99-44 117 71 78-66 123 67v105H0z"/>
+      </svg>
+    </div>
+
+    <section id="intro" class="intro">
+      <div class="title-mark" aria-hidden="true">
+        <span></span><svg class="flight-crest" viewBox="0 0 100 52"><path d="M49 37C35 13 16 8 3 14l15 6-8 8 17-1-3 12 17-5 9 13 9-13 17 5-3-12 17 1-8-8 15-6C84 8 65 13 51 37Z"/><path d="m47 35 3-23 3 23m-3-23-4-5m4 5 4-5"/></svg><span></span>
+      </div>
+      <h1>Un vuelo hacia ti</h1>
+      <button id="startButton" class="start-button" type="button">
+        <span>Comenzar el vuelo</span>
+        <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M5 14h17m-6-6 6 6-6 6"/></svg>
+      </button>
+    </section>
+
+    <section id="flight" class="flight" aria-hidden="true">
+      <div id="darkDragon" class="dragon dragon-dark" role="img" aria-label="Dragón oscuro volando"></div>
+
+      <div id="whiteDragon" class="dragon dragon-white" role="img" aria-label="Dragona blanca volando"></div>
+
+      <div id="heart" class="heart" aria-hidden="true">
+        <svg viewBox="0 0 120 110"><defs><radialGradient id="heart-glow"><stop offset="0" stop-color="#fff"/><stop offset=".25" stop-color="#ffd9e8"/><stop offset=".72" stop-color="#ff72a6"/><stop offset="1" stop-color="#d71f61"/></radialGradient></defs><path d="M60 101C48 85 12 67 12 35 12 14 38 4 60 28 82 4 108 14 108 35c0 32-36 50-48 66Z" fill="url(#heart-glow)"/></svg>
+      </div>
+
+      <button id="envelope" class="envelope" type="button" aria-label="Abrir la carta">
+        <span class="envelope-back"></span>
+        <span class="envelope-letter"></span>
+        <span class="envelope-front"></span>
+        <span class="envelope-seal" aria-hidden="true">♥</span>
+      </button>
+    </section>
+
+    <section id="letterScene" class="letter-scene" role="dialog" aria-modal="true" aria-label="Carta" aria-hidden="true">
+      <div class="letter-shell">
+        <span class="letter-ornament" aria-hidden="true"></span>
+        <span class="letter-folds" aria-hidden="true"></span>
+        <span class="letter-scroll-cue" aria-hidden="true"><svg viewBox="0 0 20 12"><path d="m3 3 7 6 7-6"/></svg></span>
+        <button id="closeLetter" class="close-letter" type="button" aria-label="Cerrar la carta">×</button>
+      <article class="letter" aria-label="Carta" tabindex="0">
+        <div class="letter-content">
+          <p>No sé exactamente en qué momento empezaste a volverte alguien tan especial para mí,</p>
+          <p>pero sí sé que cada vez me gusta más conocerte.</p>
+          <p>A veces pienso que las mejores historias no empiezan de forma perfecta,</p>
+          <p>simplemente empiezan... y poco a poco se vuelven importantes.</p>
+          <p>Y eso es lo que me pasa contigo.</p>
+          <p>Me haces ilusión,</p>
+          <p>me sacas sonrisas,</p>
+          <p>y de alguna manera haces que todo se sienta más bonito.</p>
+          <p>No sé hasta dónde nos lleve esta aventura,</p>
+          <p>pero si algo tengo claro,</p>
+          <p>es que me encantaría seguir viviéndola contigo.</p>
+          <p class="signoff">Con cariño,<br><strong>Mati</strong></p>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <h2 id="finalMessage" class="final-message" aria-label="Te quiero, Cami boba" hidden>
+      <span class="final-message-label" aria-hidden="true">Te quiero,</span>
+      <span class="final-message-name" aria-hidden="true">Cami boba</span>
+      <svg class="final-message-flourish" viewBox="0 0 240 24" aria-hidden="true"><path pathLength="1" d="M12 16C62 3 171 3 218 11c24 4-8 12-33 6"/></svg>
+    </h2>
+    <div id="vignette" class="vignette" aria-hidden="true"></div>
+  </main>
+  <script src="soundtrack-data.js?v=13"></script>
+  <script src="music.js?v=13"></script>
+  <script src="reference-art.js?v=13"></script>
+  <script src="finale.js?v=13"></script>
+  <script src="envelope.js?v=13"></script>
+  <script src="script.js?v=13"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+FUENTES INCLUIDAS — SIN DESCARGAS EN TIEMPO DE EJECUCIÓN
+
+Lora: Copyright 2011 The Lora Project Authors, con Reserved Font Name Lora.
+Fuente del archivo sin modificar:
+https://github.com/google/fonts/tree/main/ofl/lora
+https://raw.githubusercontent.com/google/fonts/main/ofl/lora/Lora%5Bwght%5D.ttf
+Licencia incluida: assets/fonts/Lora-OFL.txt (SIL Open Font License 1.1).
+
+Caveat: Copyright 2014 The Caveat Project Authors.
+Fuente del archivo sin modificar:
+https://github.com/google/fonts/tree/main/ofl/caveat
+https://raw.githubusercontent.com/google/fonts/main/ofl/caveat/Caveat%5Bwght%5D.ttf
+Licencia incluida: assets/fonts/Caveat-OFL.txt (SIL Open Font License 1.1).
+
+Los archivos TTF se han renombrado para rutas sencillas, sin modificar sus bytes
+ni sus nombres tipográficos internos. Se distribuyen con sus licencias completas.
