@@ -103,8 +103,10 @@
       invitation.innerHTML='<span>Ábreme</span><svg viewBox="0 0 40 24"><path d="M7 3c17-5 29 4 16 15m-7-3 7 4 4-7"/></svg>';
       const front=refs.envelope.cloneNode();front.className='envelope-cutout-front';
       const seal=refs.envelope.cloneNode();seal.className='envelope-wax';
+      const flowers=document.createElement('span');flowers.className='envelope-gerberas';flowers.setAttribute('aria-hidden','true');
+      const ribbon=document.createElement('span');ribbon.className='envelope-ribbon';ribbon.setAttribute('aria-hidden','true');
       refs.envelope.className='envelope-base';
-      $('envelope').replaceChildren(refs.envelope,pocket,paper,front,seal,flap,invitation);
+      $('envelope').replaceChildren(refs.envelope,pocket,paper,front,ribbon,seal,flap,flowers,invitation);
     }
     return {frames,canvas,ctx:canvas.getContext('2d'),last:-1,side:index,drawnAt:-1};
   }
@@ -331,6 +333,7 @@
     $('stars').appendChild(star);
   }
   if(params.has('qa')) document.documentElement.classList.add('qa-mode');
+  if(qa)experience.style.setProperty('--wish-at',Math.max(0,(Number(params.get('testTime'))||0)-.25)+'s');
   Promise.all([Promise.all([0,1].map(index=>loadArt(index))),document.fonts?document.fonts.ready:Promise.resolve()])
     .then(([items])=>{
       art.push(...items);ready=true;window.flightAudit.ready=true;$('startButton').disabled=false;

@@ -30,9 +30,8 @@
 }
 .letter::before,.letter::after { display: none; }
 .letter-content { font-family: 'Lora Letter',Georgia,serif; font-size: clamp(16px,1.26vw,18px); font-weight: 400; line-height: 1.58; letter-spacing: -.012em; color: #443c36; font-kerning: normal; font-synthesis: none; text-rendering: optimizeLegibility; }
-.letter-content p { margin: 0 0 .58em; }
-.letter-content p:first-child::first-letter { float: left; padding: .08em .10em 0 0; font-size: 2.95em; line-height: .8; font-weight: 500; color: #365a69; }
-.letter-content p:nth-child(5),.letter-content p:nth-child(9) { margin-top: 1em; }
+.letter-content p { margin: 0 0 .9em; }
+.letter-content p:first-child { margin-bottom: .7em; font-family: 'Caveat Signature',cursive; font-size: 1.9rem; line-height: 1.2; color: #365a69; }
 .letter-content .signoff { position: relative; margin-top: 1.55em; min-height: 102px; padding: 2px 126px 0 0; font-size: .94em; line-height: 1.65; }
 .letter-content .signoff::after { content: ''; position: absolute; pointer-events: none; right: -5px; bottom: 0; width: 115px; height: 116px; background: url('assets/letter-sprig.svg') 50% 50%/contain no-repeat; opacity: .9; }
 .letter-content strong { display: inline-block; position: relative; margin-top: 0; color: #355a70; font-family: 'Caveat Signature','Lora Letter',cursive; font-size: 2.25rem; font-weight: 700; line-height: 1.2; letter-spacing: -.025em; }
@@ -91,7 +90,7 @@
 }
 @media (max-width:640px) {
   .letter-content { font-size: clamp(16px,4.05vw,17px); line-height: 1.57; }
-  .letter-content p { margin-bottom: .55em; }
+  .letter-content p { margin-bottom: .9em; }
   .letter-content .signoff { padding-right: 94px; min-height: 94px; }
   .letter-content .signoff::after { width: 88px; height: 100px; right: -4px; }
   .letter-content strong { font-size: 2.15rem; }
