@@ -105,8 +105,9 @@
       const seal=refs.envelope.cloneNode();seal.className='envelope-wax';
       const flowers=document.createElement('span');flowers.className='envelope-gerberas';flowers.setAttribute('aria-hidden','true');
       const ribbon=document.createElement('span');ribbon.className='envelope-ribbon';ribbon.setAttribute('aria-hidden','true');
+      const material=document.createElement('span');material.className='envelope-material';material.setAttribute('aria-hidden','true');
       refs.envelope.className='envelope-base';
-      $('envelope').replaceChildren(refs.envelope,pocket,paper,front,ribbon,seal,flap,flowers,invitation);
+      $('envelope').replaceChildren(refs.envelope,pocket,paper,front,material,ribbon,seal,flap,flowers,invitation);
     }
     return {frames,canvas,ctx:canvas.getContext('2d'),last:-1,side:index,drawnAt:-1};
   }
