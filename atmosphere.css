@@ -1,24 +1,24 @@
 /* A small, personal 2D layer. No remote assets or extra animation loop. */
-.nordic-shores { position:absolute; bottom:-1px; left:0; width:100%; height:clamp(110px,18vw,225px); background:url('assets/nordic-shores.svg') bottom center/100% 100% no-repeat; pointer-events:none; opacity:.85; }
+.nordic-shores { position:absolute; z-index:2; bottom:0; left:0; width:100%; height:clamp(110px,18vw,225px); background:url('assets/nordic-shores-v16.svg') bottom center/100% 100% no-repeat; pointer-events:none; opacity:1; filter:drop-shadow(0 3px 3px #010e20); }
 .shooting-star { position:absolute; left:72%; top:9%; width:clamp(80px,15vw,170px); height:2px; opacity:0; transform:rotate(-28deg); transform-origin:left center; pointer-events:none; background:linear-gradient(90deg,#fffdf2,#c5f7e7 22%,transparent); border-radius:100%; }
 .shooting-star::after { content:''; position:absolute; left:-2px; top:-2px; width:5px; height:5px; border-radius:50%; background:#f3fff7; box-shadow:0 0 9px #c1ffdf,0 0 22px #b4dcff; }
 .experience.started .shooting-star { animation:cami-wish 1.7s .25s cubic-bezier(.18,.5,.45,1) both; }
 @keyframes cami-wish { 0%{opacity:0;transform:translate(0,0) rotate(-28deg) scaleX(.2)} 16%{opacity:.95} 70%{opacity:.8} 100%{opacity:0;transform:translate(-44vw,22vw) rotate(-28deg) scaleX(.65)} }
-.envelope-gerberas { position:absolute; z-index:5; right:-5%; bottom:-6%; width:43%; aspect-ratio:160/180; background:url('assets/gerberas-cami.svg') center/contain no-repeat; pointer-events:none; }
+.envelope-gerberas { position:absolute; z-index:5; right:-5%; bottom:-6%; width:43%; aspect-ratio:160/180; background:url('assets/gerberas-cami.svg?v=16') center/contain no-repeat; pointer-events:none; opacity:1; filter:drop-shadow(0 1px 0 #5a6349) drop-shadow(1px 3px 2px #302e2866); }
 .envelope-ribbon { position:absolute; z-index:3; inset:0; pointer-events:none; background:linear-gradient(90deg,#295772,#7198ac 45%,#345d79); clip-path:polygon(23% 8%,27% 7%,34% 96%,30% 96%); opacity:.9; }
-.opening-envelope .envelope-gerberas,.opening-envelope .envelope-ribbon { transition:opacity .4s ease; opacity:.85; }
+.opening-envelope .envelope-gerberas,.opening-envelope .envelope-ribbon { opacity:1; }
 .letter-open .envelope-gerberas,.letter-open .envelope-ribbon { opacity:0; }
 .envelope-invitation { color:#e6f7ec; text-shadow:0 2px 10px #020b20,0 0 16px #a0e7d455; }
 .start-button { border-color:#93c7b766; }
 .start-button:focus-visible { outline-color:#b5e6cd; }
-.letter-ornament { background-image:url('assets/gerberas-cami.svg'); width:81px; height:75px; top:-4px; left:12px; transform:rotate(-26deg); }
+.letter-ornament { background-image:url('assets/gerberas-cami.svg?v=16'); width:81px; height:75px; top:-4px; left:12px; transform:rotate(-26deg); opacity:1; filter:drop-shadow(0 1px 0 #726648) drop-shadow(1px 2px 1px #51402b33); }
 .letter-ornament::after { display:none; }
-@keyframes sprig-arrive { from {opacity:0;transform:rotate(-34deg) translateY(8px)} to {opacity:.9;transform:rotate(-26deg)} }
-.letter-content .signoff::after { background-image:url('assets/gerberas-cami.svg'); }
+@keyframes sprig-arrive { from {opacity:0;transform:rotate(-34deg) translateY(8px)} to {opacity:1;transform:rotate(-26deg)} }
+.letter-content .signoff::after { background-image:url('assets/gerberas-cami.svg?v=16'); opacity:1; filter:drop-shadow(0 1px 0 #726648) drop-shadow(1px 2px 1px #51402b33); }
 .letter-content p:first-child { color:#35665e; }
 .letter-content strong { color:#315f78; }
 .qa-mode .experience.started .shooting-star { animation-delay:calc(var(--wish-at,3s) * -1) !important; }
-@media(max-width:650px) { .nordic-shores { height:144px; background-image:url('assets/nordic-shores.svg'),url('assets/nordic-shores.svg'); background-size:820px 144px; background-position:left bottom,right bottom; opacity:.72; } }
+@media(max-width:650px) { .nordic-shores { height:144px; background-image:url('assets/nordic-shores-v16.svg'),url('assets/nordic-shores-v16.svg'); background-size:820px 144px; background-position:left bottom,right bottom; } }
 @media(max-width:380px) { .nordic-shores { height:126px; background-size:720px 126px; } }
-@media(max-height:500px) { .nordic-shores { height:95px; opacity:.65; } }
+@media(max-height:500px) { .nordic-shores { height:95px; } }
 @media(prefers-reduced-motion:reduce) { html:not(.force-motion) .shooting-star { display:none; animation:none!important; } }
